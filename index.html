@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuleSoft Camera App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #0070d2;
+        }
+        .camera-container {
+            position: relative;
+            width: 600px;
+            height: 450px;
+            background-color: #e0f7ff;
+            border: 2px solid #0070d2;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0070d2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        canvas {
+            display: none;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .input-container label {
+            font-weight: bold;
+        }
+        .input-container input {
+            padding: 5px;
+            border: 1px solid #0070d2;
+            border-radius: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MuleSoft Camera App</h1>
+    <div class="camera-container">
+        <video id="video" autoplay></video>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="input-container">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname">
+        <label for="invoice-number">Invoice Number</label>
+        <input type="text" id="invoice-number">
+        <label for="invoice-date">Invoice Date</label>
+        <input type="date" id="invoice-date">
+        <label for="total-amount">Total Amount</label>
+        <input type="number" id="total-amount">
+    </div>
+    <button id="snap">Take Picture</button>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
